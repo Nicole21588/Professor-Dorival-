@@ -1,4 +1,3 @@
-
 class Veiculo:
     def __init__(self, marca, modelo):
         self.marca = marca
@@ -19,3 +18,4 @@ class Carro(Veiculo):
 
 carro1 = Carro("Toyota", "Corolla", 4)
 carro1.exibir_dados()
+

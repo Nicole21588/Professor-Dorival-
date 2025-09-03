@@ -1,0 +1,106 @@
+class Carro:
+    def __init__(self, modelo, placa):
+        self.modelo = modelo
+        self.placa = placa
+
+    def detalhes(self):
+        print(f"Carro: {self.modelo}, Placa: {self.placa}")
+
+
+class Pessoa:
+    def __init__(self, nome, cargo):
+        self.nome = nome
+        self.cargo = cargo
+
+    def informacoes(self):
+        print(f"Funcionário: {self.nome}, Cargo: {self.cargo}")
+
+
+class Manual:
+    def __init__(self, titulo, maquina):
+        self.titulo = titulo
+        self.maquina = maquina
+
+    def mostrar(self):
+        print(f"Manual: {self.titulo}, Máquina: {self.maquina}")
+
+
+class Produto:
+    def __init__(self, nome, quantidade):
+        self.nome = nome
+        self.quantidade = quantidade
+
+    def estoque(self):
+        print(f"Produto: {self.nome}, Quantidade: {self.quantidade}")
+
+
+class Treinamento:
+    def __init__(self, nome, duracao):
+        self.nome = nome
+        self.duracao = duracao
+
+    def apresentar(self):
+        print(f"Treinamento: {self.nome}, Duração: {self.duracao} horas")
+
+
+class Aluno:
+    def __init__(self, nome, curso, nota_final):
+        self.nome = nome
+        self.curso = curso
+        self.nota_final = nota_final
+
+    def status(self):
+        resultado = "Aprovado" if self.nota_final >= 7 else "Reprovado"
+        print(f"Aluno: {self.nome}, Curso: {self.curso}, Resultado: {resultado}")
+
+
+carro1 = Carro("Fiat Uno", "ABC-1234")
+carro2 = Carro("Ford Ka", "XYZ-5678")
+
+func1 = Pessoa("João", "Operador de Máquinas")
+func2 = Pessoa("Maria", "Supervisora")
+func3 = Pessoa("Carlos", "Técnico de Segurança")
+
+manual1 = Manual("Manual da Esteira", "Esteira Transportadora")
+manual2 = Manual("Manual do Forno", "Forno Industrial")
+
+produto1 = Produto("Parafuso", 1500)
+produto2 = Produto("Correia", 250)
+produto3 = Produto("Motor Elétrico", 12)
+
+trein1 = Treinamento("Segurança no Trabalho", 8)
+trein2 = Treinamento("Operação de Máquinas", 6)
+
+aluno1 = Aluno("Ana", "Curso de Segurança", 9)
+aluno2 = Aluno("Bruno", "Curso de Máquinas", 6.5)
+aluno3 = Aluno("Clara", "Curso de Logística", 7)
+
+
+print("=== RELATÓRIO DA INDÚSTRIA ===\n")
+
+print("--- Frota de Veículos ---")
+carro1.detalhes()
+carro2.detalhes()
+
+print("\n--- Funcionários ---")
+func1.informacoes()
+func2.informacoes()
+func3.informacoes()
+
+print("\n--- Manuais Técnicos ---")
+manual1.mostrar()
+manual2.mostrar()
+
+print("\n--- Produtos em Estoque ---")
+produto1.estoque()
+produto2.estoque()
+produto3.estoque()
+
+print("\n--- Treinamentos Obrigatórios ---")
+trein1.apresentar()
+trein2.apresentar()
+
+print("\n--- Alunos em Cursos de Capacitação ---")
+aluno1.status()
+aluno2.status()
+aluno3.status()
